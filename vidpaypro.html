@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidPay Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021141150935329"
+     crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-method:hover {
+            border-color: var(--primary);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://placehold.co/40x40" alt="VidPay Pro logo - abstract blue and green video play symbol" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold text-gray-900">VidPay Pro</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#features" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Features</a>
+                        <a href="#pricing" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pricing</a>
+                        <a href="#testimonials" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Testimonials</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Get Started</button>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Monetize & Promote Your Videos Automatically
+                </h1>
+                <p class="mt-6 text-xl max-w-3xl mx-auto">
+                    VidPay Pro combines seamless payment processing with AI-powered promotion to maximize your video revenue effortlessly.
+                </p>
+                <div class="mt-10">
+                    <div class="inline-flex rounded-md shadow">
+                        <button class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                            Start Free Trial
+                        </button>
+                    </div>
+                    <div class="ml-3 inline-flex">
+                        <button class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Video -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+            <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Featured Creator This Month
+                </h2>
+                <p class="mt-3 text-lg text-gray-500">
+                    See how DigitalNomadPro increased revenue by 240% using our automated promotion system.
+                </p>
+                <div class="mt-8 sm:max-w-lg sm:mx-auto lg:mx-0">
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-lg p-2">
+                                <i class="fas fa-chart-line text-white"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-lg font-medium text-gray-900">240% Revenue Increase</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-lg p-2">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-lg font-medium text-gray-900">85% More Engagement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-lg p-2">
+                                <i class="fas fa-bolt text-white"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-lg font-medium text-gray-900">Fully Automated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9No-FiEInLA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Everything You Need to Succeed
+                </p>
+                <p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
+                    Our platform is packed with powerful tools to grow your audience and revenue.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <!-- Feature 1 -->
+                    <div class="feature-card relative transition-all duration-300 ease-in-out">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">AI-Powered Promotion</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    Our algorithms automatically promote your videos to the right audience at optimal times.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card relative transition-all duration-300 ease-in-out">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Multi-Payment Support</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    Accept credit cards, PayPal, crypto, and more with built-in fraud protection.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card relative transition-all duration-300 ease-in-out">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Advanced Analytics</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    Detailed insights into viewer behavior, drop-off points, and revenue performance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card relative transition-all duration-300 ease-in-out">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Automated Workflows</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    Set up rules to automatically release, promote, or monetize videos based on conditions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Payment Integration</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Get Paid Easily & Securely
+                </p>
+                <p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
+                    Support for all major payment methods to maximize your conversion rates.
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
+                <div class="payment-method col-span-1 flex justify-center py-8 px-8 border border-gray-200 rounded-lg transition-all duration-200">
+                    <img src="https://placehold.co/100x60" alt="Visa payment method logo with blue and gold colors" class="max-h-12">
+                </div>
+                <div class="payment-method col-span-1 flex justify-center py-8 px-8 border border-gray-200 rounded-lg transition-all duration-200">
+                    <img src="https://placehold.co/100x60" alt="Mastercard payment method logo with red and yellow circles" class="max-h-12">
+                </div>
+                <div class="payment-method col-span-1 flex justify-center py-8 px-8 border border-gray-200 rounded-lg transition-all duration-200">
+                    <img src="https://placehold.co/100x60" alt="PayPal payment method logo with blue text on white background" class="max-h-12">
+                </div>
+                <div class="payment-method col-span-1 flex justify-center py-8 px-8 border border-gray-200 rounded-lg transition-all duration-200">
+                    <img src="https://placehold.co/100x60" alt="Apple Pay payment method logo with white text on black background" class="max-h-12">
+                </div>
+                <div class="payment-method col-span-1 flex justify-center py-8 px-8 border border-gray-200 rounded-lg transition-all duration-200">
+                    <img src="https://placehold.co/100x60" alt="Google Pay payment method logo with colorful glyphs" class="max-h-12">
+                </div>
+                <div class="payment-method col-span-1 flex justify-center py-8 px-8 border border-gray-200 rounded-lg transition-all duration-200">
+                    <img src="https://placehold.co/100x60" alt="Bitcoin cryptocurrency logo with orange Bitcoin symbol" class="max-h-12">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automated Promotion Demo -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold sm:text-4xl">
+                        <span class="block">Automated Promotions</span>
+                        <span class="block text-indigo-400">That Actually Work</span>
+                    </h2>
+                    <p class="mt-3 text-lg text-gray-300">
+                        Our AI analyzes viewer behavior and automatically promotes your videos to similar audiences, optimizing for engagement and conversions.
+                    </p>
+                    <div class="mt-8">
+                        <div class="inline-flex rounded-md shadow">
+                            <button class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                                See How It Works
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform">
+                        <div class="p-8">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-indigo-500 rounded-lg p-2">
+                                    <i class="fas fa-bolt text-white"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-lg font-medium text-white">Promotion Activity</p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-sm font-medium text-gray-300">Facebook Ads</span>
+                                    <span class="text-sm font-medium text-indigo-400">Active</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-indigo-500 h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                                <div class="flex items-center justify-between mt-1">
+                                    <span class="text-xs text-gray-400">123 conversions</span>
+                                    <span class="text-xs text-gray-400">$2.17 CPA</span>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-sm font-medium text-gray-300">Google Ads</span>
+                                    <span class="text-sm font-medium text-indigo-400">Optimizing</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-indigo-500 h-2.5 rounded-full" style="width: 45%"></div>
+                                </div>
+                                <div class="flex items-center justify-between mt-1">  <span class="text-xs text-gray-400">87 conversions</span>
+                                    <span class="text-xs text-gray-400">$3.41 CPA</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 animate-pulse">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="h-2 w-2 rounded-full bg-indigo-400"></div>
+                                    </div>
+                                    <div class="ml-2 text-sm text-gray-300">AI currently testing 3 new audiences</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="sm:flex sm:flex-col sm:align-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-center">Pricing Plans</h2>
+                <p class="mt-5 text-xl text-gray-500 sm:text-center">
+                    Choose a plan that fits your needs. Cancel anytime.
+                </p>
+                <div class="relative mt-6 bg-gray-100 rounded-lg p-0.5 flex self-center">
+                    <button type="button" class="relative bg-white border-gray-200 rounded-md py-2 px-6 text-sm font-medium text-gray-900 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-indigo-500">Monthly billing</button>
+                    <button type="button" class="ml-0.5 relative border border-transparent rounded-md py-2 px-6 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-indigo-500">Yearly billing</button>
+                </div>
+            </div>
+            <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 lg:max-w-4xl lg:mx-auto">
+                <!-- Starter Plan -->
+                <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <h2 class="text-lg leading-6 font-medium text-gray-900">Starter</h2>
+                        <p class="mt-4 text-sm text-gray-500">Perfect for new creators</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">$19</span>
+                            <span class="text-base font-medium text-gray-500">/mo</span>
+                        </p>
+                        <button class="mt-8 block w-full py-3 px-6 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50">
+                            Get Started
+                        </button>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Up to 10 videos</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Basic promotion</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">3 payment methods</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Email support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="border-2 border-indigo-500 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <h2 class="text-lg leading-6 font-medium text-gray-900">Pro</h2>
+                            <span class="ml-2 px-2 py-1 text-xs font-bold leading-4 text-indigo-800 bg-indigo-200 rounded-full">Most Popular</span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">For serious creators scaling up</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">$49</span>
+                            <span class="text-base font-medium text-gray-500">/mo</span>
+                        </p>
+                        <button class="mt-8 block w-full py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-center font-medium">
+                            Get Started
+                        </button>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Up to 50 videos</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Advanced promotion</span>
+                            </li><li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">All payment methods</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Priority support</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Custom branding</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">API access</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <h2 class="text-lg leading-6 font-medium text-gray-900">Enterprise</h2>
+                        <p class="mt-4 text-sm text-gray-500">For studios & large operations</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">$149</span>
+                            <span class="text-base font-medium text-gray-500">/mo</span>
+                        </p>
+                        <button class="mt-8 block w-full py-3 px-6 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50">
+                            Get Started
+                        </button>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Unlimited videos</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Premium promotion</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">All payment methods</span>
+                            </li>
+                            <li class="flex"> <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">24/7 support</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Advanced analytics</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-check text-indigo-500 mt-0.5 mr-2"></i>
+                                <span class="text-sm text-gray-500">Dedicated account manager</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Testimonials</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    What Our Customers Say
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://placehold.co/40x40" alt="Sarah Johnson portrait" class="h-10 w-10 rounded-full">
+                            </div>
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">Sarah Johnson</div>
+                                <div class="text-sm text-gray-500">Educational Content Creator</div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-gray-600">
+                                "VidPay Pro tripled my course revenue within 2 months. The automatic promotions target the perfect audience without me lifting a finger."
+                            </div>
+                            <div class="mt-3 flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->  <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://placehold.co/40x40" alt="Mark Williams portrait" class="h-10 w-10 rounded-full">
+                            </div>
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">Mark Williams</div>
+                                <div class="text-sm text-gray-500">Fitness Coach</div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-gray-600">
+                                "I was skeptical about automating promotions, but VidPay Pro's AI outperforms my manual efforts while reducing ad spend by 30%."
+                            </div>
+                            <div class="mt-3 flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://placehold.co/40x40" alt="Lisa Chen portrait" class="h-10 w-10 rounded-full">
+                            </div>
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">Lisa Chen</div>
+                                <div class="text-sm text-gray-500">Music Producer</div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-gray-600">
+                                "The integrated payment system converted 20% more of my viewers to paying subscribers compared to my previous setup."
+                            </div>
+                            <div class="mt-3 flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-indigo-700">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
+            <div class="">
+                <h2 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    Ready to grow your audience?
+                </h2>
+                <p class="mt-5 text-xl text-indigo-200">
+                    Start your free 14-day trial today. No credit card required.
+                </p>
+            </div>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <button class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10">
+                        Get Started
+                    </button>
+                </div>
+                <div class="ml-3 inline-flex">
+                    <button class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-400 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                <div class="col-span-2 space-y-8">
+                    <img src="https://placehold.co/40x40" alt="VidPay Pro logo - abstract blue and green video play symbol" class="h-8 w-auto">
+                    <p class="text-gray-300 text-sm">
+                        VidPay Pro helps creators monetize and grow their audience with automated promotion tools and seamless payment processing.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Twitter</span>
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Solutions</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Content Creators</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Online Course Creators</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Digital Agencies</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Video Producers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Support</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">API Reference</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Community</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-gray-300 text-sm">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300 text-sm">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300 text-sm">Cookie Policy</a>
+                </div>
+                <p class="mt-8 text-xs text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2023 VidPay Pro. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.sm\\:hidden button');
+            const mobileMenuItems = document.querySelector('.sm\\:hidden + div');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                mobileMenuItems.classList.toggle('hidden');
+            });
+            
+            // Demo functionality for pricing toggle
+            const monthlyButton = document.querySelector('.relative button:first-child');
+            const yearlyButton = document.querySelector('.relative button:last-child');
+            
+            monthlyButton.addEventListener('click', function() {
+                yearlyButton.classList.remove('bg-white', 'border-indigo-500', 'text-gray-900');
+                yearlyButton.classList.add('border-transparent', 'text-gray-700');
+                this.classList.remove('border-transparent', 'text-gray-700');
+                this.classList.add('bg-white', 'border-indigo-500', 'text-gray-900');
+                
+                // Update pricing display
+                document.querySelectorAll('[data-monthly-price], [data-yearly-price]').forEach(el => {
+                    if(el.getAttribute('data-monthly-price')) {
+                        el.textContent = el.getAttribute('data-monthly-price');
+                    }
+                });
+            });
+            
+            yearlyButton.addEventListener('click', function() {
+                monthlyButton.classList.remove('bg-white', 'border-indigo-500', 'text-gray-900');
+                monthlyButton.classList.add('border-transparent', 'text-gray-700');
+                this.classList.remove('border-transparent', 'text-gray-700');
+                this.classList.add('bg-white', 'border-indigo-500', 'text-gray-900');
+                
+                // Update pricing display
+                document.querySelectorAll('[data-monthly-price], [data-yearly-price]').forEach(el => {
+                    if(el.getAttribute('data-yearly-price')) {
+                        el.textContent = el.getAttribute('data-yearly-price');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
